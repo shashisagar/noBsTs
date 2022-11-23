@@ -9,8 +9,8 @@ interface User {
     }
 }
 export const getEmail = (user: User): string => {
-    if(user.info?.email){
-        return user.info.email;
+    if(user.info){
+        return user.info.email!;
     }
     return '';
 }
@@ -19,4 +19,4 @@ export const addWithCallback = (x: number, y: number, cb?: () => void) => {
     cb?.();
 }
 
-console.log(getEmail({id:'a',info:{email:''}}));
+console.log(getEmail({id:'a',info:{email:'shashi'}}));
