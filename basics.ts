@@ -1,34 +1,39 @@
-let userName:string="jayMataDi";
-let hasLoggedIn:boolean=true;
+let userName: string = "jayMataDi";
+let hasLoggedIn: boolean = true;
 userName += " ram";
 console.log(userName);
-let myNumber:number=10;
-let myRegex:RegExp=/ef/;
+let myNumber: number = 10;
+let myRegex: RegExp = /ef/;
 console.log(myRegex);
-const names:string[] = userName.split(" ");
+const names: string[] = userName.split(" ");
 console.log(names);
-const myValue:Array<number>=[1,2,3];
+const myValue: Array<number> = [1, 2, 3];
 console.log(myValue);
 interface Person {
     first: string;
     last: string;
 }
-const myPerson : Person = {
+const myPerson: Person = {
     first: "ram",
-    last:"shyam"
+    last: "shyam"
 }
 console.log(myPerson);
-const ids: Record<number,string> = {
-   10 : "a",
-   20: "b"
+const ids: Record<number, string> = {
+    10: "a",
+    20: "b"
 }
-ids[30] ="c";
+ids[30] = "c";
 console.log(ids[10]);
-if(ids[30]==="D") {
+if (ids[30] === "D") {
 }
-for(let i=0;i<10;i++) {
+for (let i = 0; i < 10; i++) {
     console.log(i);
 }
-[1,2,3].forEach((v) => console.log(v));
-const m:number[]=[4,5,6].map((m) => m*10);
+[1, 2, 3].forEach((v) => console.log(v));
+const m: number[] = [4, 5, 6].map((m) => m * 10);
 console.log(m);
+
+function add(a: number, b: number, ...rest: number[]) {
+    return a + b + rest.reduce((p, c) => p + c, 0);
+}
+console.log("here", add(10, 10, 10, 10, 10));
